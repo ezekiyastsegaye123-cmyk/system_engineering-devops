@@ -46,11 +46,15 @@
             height: 100%;
             background-color: rgba(15, 23, 42, 0.4); /* Dark overlay for text readability */
             z-index: 1;
+            opacity: 0; /* Start with the overlay transparent */
+            animation: fadeInOverlay 1s ease-in-out forwards; /* Fade in animation */
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+            opacity: 0; /* Start with the content transparent */
+            animation: fadeInUp 1s ease-out 0.5s forwards; /* Fade in and up animation with a delay */
         }
 
         /* Services Section Animation */
@@ -59,6 +63,8 @@
             border-radius: 0.5rem;
             padding: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0; /* Start with the cards transparent */
+            transform: translateY(20px); /* Start slightly below */
         }
 
         .service-card:hover {
@@ -74,6 +80,24 @@
 
         .fade-in {
             animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeInOverlay {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .service-card:nth-child(1) {
+            animation: fadeInUp 1s ease-out 1s forwards; /* Different delay for the first card */
+        }
+
+        .service-card:nth-child(2) {
+            animation: fadeInUp 1s ease-out 1.3s forwards; /* Different delay for the second card */
         }
     </style>
 </head>
@@ -95,24 +119,24 @@
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container mx-auto px-6 hero-content text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 fade-in">Elevating Digital Experiences</h1>
-            <p class="text-gray-200 text-xl mb-10 fade-in">Web Development & AI Automation for a Connected World.</p>
-            <a href="#" class="btn-primary fade-in">Explore Our Work</a>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Elevating Digital Experiences</h1>
+            <p class="text-gray-200 text-xl mb-10">Web Development & AI Automation for a Connected World.</p>
+            <a href="#" class="btn-primary">Explore Our Work</a>
         </div>
     </header>
 
     <!-- Services Section -->
     <section class="py-16">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-in">Our Services</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Web Development -->
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <h3 class="text-2xl font-semibold mb-4">Web Development</h3>
                     <p class="text-gray-300">Crafting bespoke web solutions that resonate with your brand and captivate your audience. We build responsive, high-performance websites that drive results.</p>
                 </div>
                 <!-- AI Automation -->
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <h3 class="text-2xl font-semibold mb-4">AI Automation</h3>
                     <p class="text-gray-300">Streamline your operations and unlock new efficiencies with our AI-powered automation services. From chatbots to data analysis, we've got you covered.</p>
                 </div>
