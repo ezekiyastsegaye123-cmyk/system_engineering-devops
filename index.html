@@ -11,15 +11,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
         body {
-            background-color: #1a202c; /* Dark Gray Background */
-            color: #f7fafc; /* Light Text */
+            background-color: #F5F3EE; /* Off-white Background */
+            color: #111111; /* Black Text */
             font-family: 'Space Grotesk', sans-serif; /* Brutalist font */
             overflow-x: hidden;
         }
 
         .btn-primary {
-            background-color: #9f7aea; /* Purple Button */
-            color: #1a202c;
+            background-color: #E63B2E; /* Signal Red Button */
+            color: #F5F3EE;
             padding: 0.75rem 1.5rem;
             border-radius: 0; /* No rounded corners */
             font-weight: 600;
@@ -28,13 +28,13 @@
         }
 
         .btn-primary:hover {
-            background-color: #b794f4; /* Lighter Purple on Hover */
+            background-color: #c93227; /* Darker Red on Hover */
             transform: scale(1.02);
         }
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(to right, rgba(26, 32, 44, 0.8), rgba(26, 32, 44, 0.6)), url('https://images.unsplash.com/photo-1579546929518-9e396f37f69f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80'); /* Replace with Unsplash search: "brutalist, tech" */
+            background: linear-gradient(to right, rgba(232, 228, 221, 0.8), rgba(232, 228, 221, 0.6)), url('https://images.unsplash.com/photo-1579546929518-9e396f37f69f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80'); /* Replace with Unsplash search: "brutalist, tech" */
             background-size: cover;
             background-position: center;
             padding: 12rem 0;
@@ -48,7 +48,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(26, 32, 44, 0.4); /* Dark overlay */
+            background-color: rgba(232, 228, 221, 0.4); /* Off-white overlay */
             z-index: 1;
             opacity: 0;
             animation: fadeInOverlay 1s ease-in-out forwards;
@@ -63,10 +63,10 @@
 
         /* Services Section */
         .service-card {
-            background-color: #2d3748; /* Darker Card Background */
+            background-color: #E8E4DD; /* Paper Card Background */
             border-radius: 0; /* No rounded corners */
             padding: 2rem;
-            border: 1px solid #4a5568; /* Subtle border */
+            border: 2px solid #111111; /* Black border */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
             transform: translateY(20px);
@@ -136,7 +136,7 @@
         <div class="hero-overlay"></div>
         <div class="container mx-auto px-6 hero-content text-center">
             <p class="hero-line-1 mb-2">Control Room for the</p>
-            <h1 class="hero-line-2 text-white">Future.</h1>
+            <h1 class="hero-line-2 text-black">Future.</h1>
             <a href="#" class="btn-primary">Explore</a>
         </div>
     </header>
@@ -144,17 +144,17 @@
     <!-- Services Section -->
     <section class="py-16">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Our Services</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Web Development -->
                 <div class="service-card">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Web Development</h3>
-                    <p class="text-gray-300">Crafting bespoke web solutions that resonate with your brand and captivate your audience. We build responsive, high-performance websites that drive results.</p>
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Web Development</h3>
+                    <p class="text-black">Crafting bespoke web solutions that resonate with your brand and captivate your audience. We build responsive, high-performance websites that drive results.</p>
                 </div>
                 <!-- AI Automation -->
                 <div class="service-card">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">AI Automation</h3>
-                    <p class="text-gray-300">Streamline your operations and unlock new efficiencies with our AI-powered automation services. From chatbots to data analysis, we've got you covered.</p>
+                    <h3 class="text-2xl font-semibold mb-4 text-black">AI Automation</h3>
+                    <p class="text-black">Streamline your operations and unlock new efficiencies with our AI-powered automation services. From chatbots to data analysis, we've got you covered.</p>
                 </div>
             </div>
         </div>
