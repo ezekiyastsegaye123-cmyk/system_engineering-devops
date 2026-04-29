@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Sets permissions to 007 for the file hello
+chmod 007 hello
