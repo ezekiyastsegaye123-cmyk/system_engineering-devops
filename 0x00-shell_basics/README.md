@@ -1,1 +1,1 @@
-Learning the basics of the shell
+Shell basics project
