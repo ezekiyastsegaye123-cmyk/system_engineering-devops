@@ -1,1 +1,1 @@
-Counting directories in PATH
+Shell variables and expansions project
